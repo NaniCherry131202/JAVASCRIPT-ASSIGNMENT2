@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 2</title>
+</head>
+
+<body>
+    <h3>Javascript Assignment2</h3>
+</body>
+<script>
+    //Write a Javascript program that removes the duplicate elements from an array.
+    const repeatedElements= ['Charan', 'Sai', 'Charan', 'Manoj', 'Vinay', 'Manoj', 'Sai', 'Vinay', 'Charan', 'Manoj'];
+    const norepeat = [...new Set(repeatedElements)];
+    console.log(norepeat);
+
+    //Write a Javascript program to create a new string without the first and last characters of a given string.
+    let string = 'charan'
+    string_result = string.substring(1, 5)
+    console.log(string_result)
+
+    //Write a function that takes an array of strings as input and prints each element to the console using the forEach method.
+    function arrayString(array1) {
+        return array1.forEach(element => {
+            console.log(element)
+        })
+
+    }
+    const array1 = ['iphone', 'iqoo', 'realme', 'poco']
+    arrayString(array1);
+
+    //Write a function that takes an array of numbers as input and returns true if any of the numbers are negative ,otherwise false,using the some method.
+    function negative(array) {
+        return array.some(num => num < 0);
+    }
+    const array = [1, 8, 9, 36, -58, 56];
+    console.log(negative(array));
+
+    //Write a function that takes an array of numbers as input,filters out the even numbers,and then returns the sum of the remaining numbers using a combination of filter and reduce methods.
+
+    function arrayNumbers(Number) {
+        let even = Number.filter(num => num % 2 == 0)
+        console.log(even)
+        return even.reduce((acc, curr) => acc + curr, 0)
+    }
+    const Number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    console.log(arrayNumbers(Number))
+</script>
+
+</html>
